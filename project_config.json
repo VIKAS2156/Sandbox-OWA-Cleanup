@@ -7,9 +7,15 @@
   },
   "owa_mappings": [
     {
-      "production_email": "vikasvikki158@gmail.com",
-      "sandbox_email": "vikasvikki458@gmail.com",
-      "display_name": "support",
+      "production_email": "support@example.com",
+      "sandbox_email": "support.sandbox@example.com",
+      "display_name": "Support Sandbox",
+      "purpose": "UserSelection"
+    },
+    {
+      "production_email": "billing@example.com",
+      "sandbox_email": "billing.sandbox@example.com",
+      "display_name": "Billing Sandbox",
       "purpose": "UserSelection"
     }
   ]
