@@ -1,17 +1,17 @@
 {
-    "to_create": [
-        {
-            "production_email": "vikasvikki158@gmail.com",
-            "sandbox_email": "vikasvikki458@gmail.com",
-            "display_name": "support",
-            "purpose": "UserSelection"
-        }
-    ],
-    "to_swap": [
-        {
-            "alert_id": "01WdN0000010kzxUAA",
-            "developer_name": "Testing",
-            "target_email": "vikasvikki458@gmail.com"
-        }
-    ]
+  "to_create": [
+    {
+      "production_email": "support@example.com",
+      "sandbox_email": "support.sandbox@example.com",
+      "display_name": "Support Sandbox",
+      "purpose": "UserSelection"
+    }
+  ],
+  "to_swap": [
+    {
+      "alert_id": "01Wxxxxxxxxxxxx",
+      "developer_name": "Case_Notification",
+      "target_email": "support.sandbox@example.com"
+    }
+  ]
 }
