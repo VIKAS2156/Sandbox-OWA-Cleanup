@@ -48,7 +48,7 @@ Before using this tool, make sure you have:
   - Delete Org-Wide Email Addresses
   - Read and update Workflow Email Alert metadata through the Tooling API
 
-##Execution Flow
+## Execution Flow
 
 1. Run Preview
 python sf_email_tool.py -o my-sandbox-alias preview --config project_config.json
