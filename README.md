@@ -47,3 +47,64 @@ Before using this tool, make sure you have:
   - Create Org-Wide Email Addresses
   - Delete Org-Wide Email Addresses
   - Read and update Workflow Email Alert metadata through the Tooling API
+
+##Execution Flow
+`
+┌────────────────────────────────────────────────────────────────────┐
+│  STEP 1 — PREVIEW                                                 │
+│                                                                    │
+│  python sf_email_tool.py -o my-sandbox-alias preview --config      │
+│  project_config.json                                               │
+└────────────────────────────────────────────────────────────────────┘
+                                │
+                                ▼
+                 Scans Workflow Alerts
+                 Finds Production OWAs
+                 Detects Missing Sandbox OWAs
+                                │
+                                ▼
+┌────────────────────────────────────────────────────────────────────┐
+│  execution_manifest.json generated                                 │
+└────────────────────────────────────────────────────────────────────┘
+                                │
+                                ▼
+┌────────────────────────────────────────────────────────────────────┐
+│  STEP 2 — PROVISION                                                │
+│                                                                    │
+│  python sf_email_tool.py -o my-sandbox-alias provision             │
+└────────────────────────────────────────────────────────────────────┘
+                                │
+                                ▼
+                 Creates Missing Sandbox OWAs
+                                │
+                                ▼
+┌────────────────────────────────────────────────────────────────────┐
+│  MANUAL STEP                                                       │
+│                                                                    │
+│  Click Salesforce Verification Link from Sandbox Inbox             │
+└────────────────────────────────────────────────────────────────────┘
+                                │
+                                ▼
+┌────────────────────────────────────────────────────────────────────┐
+│  STEP 3 — SWAP                                                     │
+│                                                                    │
+│  python sf_email_tool.py -o my-sandbox-alias swap                  │
+└────────────────────────────────────────────────────────────────────┘
+                                │
+                                ▼
+              Updates Workflow Alerts to Sandbox OWA
+                                │
+                                ▼
+┌────────────────────────────────────────────────────────────────────┐
+│  STEP 4 — CLEANUP                                                  │
+│                                                                    │
+│  python sf_email_tool.py -o my-sandbox-alias cleanup --config      │
+│  project_config.json                                               │
+└────────────────────────────────────────────────────────────────────┘
+                                │
+                                ▼
+                 Deletes Production OWAs from Sandbox
+                                │
+                                ▼
+                     Sandbox Cleanup Complete
+
