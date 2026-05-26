@@ -1,0 +1,16 @@
+{
+  "sandbox_name": "Test3",
+  "settings": {
+    "dry_run": true, 
+    "error_on_missing_mapping": true,
+    "auto_verify_wait_seconds": 0
+  },
+  "owa_mappings": [
+    {
+      "production_email": "vikasvikki158@gmail.com",
+      "sandbox_email": "vikasvikki458@gmail.com",
+      "display_name": "support",
+      "purpose": "UserSelection"
+    }
+  ]
+}

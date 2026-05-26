@@ -1,0 +1,17 @@
+{
+    "to_create": [
+        {
+            "production_email": "vikasvikki158@gmail.com",
+            "sandbox_email": "vikasvikki458@gmail.com",
+            "display_name": "support",
+            "purpose": "UserSelection"
+        }
+    ],
+    "to_swap": [
+        {
+            "alert_id": "01WdN0000010kzxUAA",
+            "developer_name": "Testing",
+            "target_email": "vikasvikki458@gmail.com"
+        }
+    ]
+}
